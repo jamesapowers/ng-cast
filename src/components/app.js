@@ -2,8 +2,6 @@ angular.module('video-player')
   .component('app', {
   // TODO
     controller: function($scope, youTube) {
-      this.videos = window.exampleVideoData;
-      this.selected = window.exampleVideoData[0];
       
       this.onSelectVideo = (video) => {
         this.selected = video;
@@ -18,6 +16,7 @@ angular.module('video-player')
         youTube.search(userText, this.updateSearchVideos);
       };
       
+      this.search('golden gate bridge');
     },
   
     templateUrl: 'src/templates/app.html'
