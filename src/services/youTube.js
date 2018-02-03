@@ -15,7 +15,6 @@ angular.module('video-player')
         
         url: 'https://www.googleapis.com/youtube/v3/search'
       }).then(function successCallback(response) {
-        console.log(response.data.items);
         callback(response.data.items);
       }, function errorCallback(response) {
         console.log('ERROR', response);
