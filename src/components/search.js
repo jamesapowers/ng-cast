@@ -1,6 +1,13 @@
 angular.module('video-player')
 
-.component('search', {
-  // TODO
-  templateUrl: 'src/templates/search.html'
-});
+  .component('search', {
+    bindings: {
+      onClick: '<'
+    },
+    
+    controller: function() {
+      this.userText = '';
+    },
+    
+    templateUrl: 'src/templates/search.html'
+  });
